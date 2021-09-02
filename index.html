@@ -52,8 +52,8 @@
     }
 
     .photos-container .photos {
-      width: calc(90vw * 3);
-      max-width: 1200px;
+      width: calc(90vw * 5);
+      max-width: 1900px;
       display: flex;
       flex-direction: row;
       animation: moving 10s infinite alternate ease;
@@ -61,10 +61,10 @@
 
     @keyframes moving {
       90% {
-        transform: translateX(-800px);
+        transform: translateX(-1500px);
       }
       100% {
-        transform: translateX(-800px);
+        transform: translateX(-1500px);
       }
     }
 
@@ -114,8 +114,8 @@
       width: calc(100%-80px);
       max-width: 330px;
       margin: auto;
-      margin-top: 20px;
       margin-bottom: 20px;
+      margin-top: 20px;
       background: rgb(241, 129, 191);
       padding: 10px 20px;
       border-radius: 1em;
@@ -129,10 +129,13 @@
     }
 
     #mp {
-/*       display: none; */
+      display: none;
     }
   </style>
-  <body>
+  <body onscroll="playme()">
+ 
+
+
     <div class="main-con">
       <div class="header">
         <h1>Happy Birthday</h1>
@@ -174,7 +177,33 @@
                 src="https://clipartstation.com/wp-content/uploads/2018/10/valentines-hearts-clipart-2.png"
                 alt=""
               />
+              <img src="4.jpg" alt="" class="potonya" width="100%" />
+              <img
+                class="heart-besar"
+                src="https://clipartstation.com/wp-content/uploads/2018/10/valentines-hearts-clipart-2.png"
+                alt=""
+              />
+            </div>
+            <div class="photo">
+              <img
+                class="heart-kecil"
+                src="https://clipartstation.com/wp-content/uploads/2018/10/valentines-hearts-clipart-2.png"
+                alt=""
+              />
               <img src="2.jpg" alt="" class="potonya" width="100%" />
+              <img
+                class="heart-besar"
+                src="https://clipartstation.com/wp-content/uploads/2018/10/valentines-hearts-clipart-2.png"
+                alt=""
+              />
+            </div>
+            <div class="photo">
+              <img
+                class="heart-kecil"
+                src="https://clipartstation.com/wp-content/uploads/2018/10/valentines-hearts-clipart-2.png"
+                alt=""
+              />
+              <img src="5.jpg" alt="" class="potonya" width="100%" />
               <img
                 class="heart-besar"
                 src="https://clipartstation.com/wp-content/uploads/2018/10/valentines-hearts-clipart-2.png"
@@ -186,18 +215,13 @@
       </div>
       <div class="doa">
         <p id="isidoa">
-          semoga mama selalu diberi kesehatan, kebahagiaan, diberi umur panjang
-          sampai bisa menikmati hasil kerja Hendry, bisa naik haji bareng tante
-          tety dan kalo bisa hendry ikut juga ya ma, yg penting mama jangan
-          banyak sedih-sedih supaya kesehatannya selalu terjaga, semoga kami
-          semua anak-anak mama dapat membahagiakan mama dan ga membuat mama
-          sedih lagi hehe, selamat ulang tahun <b>ke-62 </b>mama. <br />
-          <br />
-          <i>we love u mom</i>
         </p>
         <p id="salam"></p>
       </div>
     </div>
+    <script src="https://w.soundcloud.com/player/api.js"></script>
+    
+   
     <script>
       var isidoa = document.getElementById("isidoa");
 
@@ -214,8 +238,10 @@
         .pauseFor(pauses)
         .typeString("kebahagiaan, ")
         .pauseFor(pauses)
+        .typeString("Semoga di setiap langkah mama selalu dalam lindungan Allah SWT, ")
+        .pauseFor(pauses)
         .typeString(
-          "diberi umur panjang sampai bisa menikmati hasil kerja Hendry, "
+          "diberi umur panjang dan bisa menikmati hasil kerja Hendry, "
         )
         .pauseFor(pauses)
         .typeString(
@@ -236,6 +262,7 @@
         .typeString("<p> </p>")
         .typeString("<i>we love u mom.</i>")
         .start();
+
     </script>
    
     </div>
