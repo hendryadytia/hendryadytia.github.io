@@ -1,29 +1,279 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="en">
   <head>
-    <meta charset="utf-8">
-    <title>Hendry Adytia Rahman</title>
-    <link rel="stylesheet" href="/style.css">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HBD Mama!</title>
+    <script src="https://unpkg.com/typewriter-effect@2.3.1/dist/core.js"></script>
   </head>
+
+  <style>
+    * {
+      font-family: Arial, Helvetica, sans-serif;
+    }
+    .main-con {
+      position: relative;
+      max-width: 600px;
+      margin: auto;
+    }
+    .header {
+      text-align: center;
+    }
+
+    .header::after {
+      content: "";
+      display: block;
+      margin: auto;
+      margin-top: -20px;
+      height: 3px;
+      width: 10%;
+      background: hotpink;
+      animation: pulsating 2s infinite ease-in-out;
+      animation-direction: alternate;
+    }
+
+    @keyframes pulsating {
+      100% {
+        width: 80%;
+      }
+    }
+    .larger {
+      font-size: 30pt;
+    }
+    .main-photos-container {
+      height: 490px;
+      overflow: hidden;
+    }
+    .photos-container {
+      width: 100%;
+      height: 500px;
+      overflow: scroll;
+    }
+
+    .photos-container .photos {
+      width: calc(90vw * 3);
+      max-width: 1200px;
+      display: flex;
+      flex-direction: row;
+      animation: moving 10s infinite alternate ease;
+    }
+
+    @keyframes moving {
+      90% {
+        transform: translateX(-800px);
+      }
+      100% {
+        transform: translateX(-800px);
+      }
+    }
+
+    .photos-container .photos .photo {
+      position: relative;
+      margin: 20px;
+      height: 450px;
+      width: 80vw;
+      background-color: grey;
+      border-radius: 1em;
+      max-width: 360px;
+      box-shadow: 8px 5px 20px rgb(0 0 0 /0.4);
+    }
+
+    .potonya {
+      border-radius: 1em;
+      height: 450px;
+    }
+    .photos:nth-child(1) {
+      margin-left: 8vw;
+    }
+
+    .heart-kecil {
+      height: 20px;
+      position: absolute;
+      /* margin-left: 60px; */
+      /* margin-top: 20px; */
+      text-align: center;
+      animation: beating 1s infinite alternate ease-in-out;
+    }
+    .heart-besar {
+      height: 40px;
+      position: absolute;
+      right: -10px;
+      bottom: 0px;
+      text-align: center;
+      animation: beating 1s infinite alternate ease-in-out;
+    }
+
+    @keyframes beating {
+      100% {
+        transform: scale(2);
+      }
+    }
+
+    .doa {
+      width: calc(100%-80px);
+      max-width: 330px;
+      margin: auto;
+      margin-top: 20px;
+      background: rgb(241, 129, 191);
+      padding: 10px 20px;
+      border-radius: 1em;
+      animation: typing 2s steps(422), blink 0.5s step-end infinite alternate;
+      box-shadow: 8px 5px 20px rgb(0 0 0 /0.4);
+    }
+
+    .doa p {
+      font-size: 16pt;
+      text-align: justify;
+    }
+
+    #mp {
+      display: none;
+    }
+  </style>
   <body>
-    <div class="utama">
-      <div class="dalem headerfont">
-      halo,<br> nama saya Hendry.
-      </div>
-      <div class="garis"></div>
-      <div class="gridcon">
-        <div class="griditem insidefont">
-<img src="ceklis.png" class="img"  alt="">
-        </div>
-        <div class="griditem insidefont">
-<img src="stick.png" class="img"  alt="">
-        </div>
-        <div class="griditem insidefont">
-<img src="ceklis2.png" class="img" alt="">
-        </div>
-
+    <div class="main-con">
+      <div class="header">
+        <h1>Happy Birthday</h1>
+        <h1 class="larger">Mamakkuuu</h1>
       </div>
 
+      <div class="main-photos-container">
+        <div class="photos-container">
+          <div class="photos">
+            <div class="photo">
+              <img
+                class="heart-kecil"
+                src="https://clipartstation.com/wp-content/uploads/2018/10/valentines-hearts-clipart-2.png"
+                alt=""
+              />
+              <img src="1.jpg" alt="" class="potonya" width="100%" />
+              <img
+                class="heart-besar"
+                src="https://clipartstation.com/wp-content/uploads/2018/10/valentines-hearts-clipart-2.png"
+                alt=""
+              />
+            </div>
+            <div class="photo">
+              <img
+                class="heart-kecil"
+                src="https://clipartstation.com/wp-content/uploads/2018/10/valentines-hearts-clipart-2.png"
+                alt=""
+              />
+              <img src="3.jpg" alt="" width="100%" class="potonya" />
+              <img
+                class="heart-besar"
+                src="https://clipartstation.com/wp-content/uploads/2018/10/valentines-hearts-clipart-2.png"
+                alt=""
+              />
+            </div>
+            <div class="photo">
+              <img
+                class="heart-kecil"
+                src="https://clipartstation.com/wp-content/uploads/2018/10/valentines-hearts-clipart-2.png"
+                alt=""
+              />
+              <img src="2.jpg" alt="" class="potonya" width="100%" />
+              <img
+                class="heart-besar"
+                src="https://clipartstation.com/wp-content/uploads/2018/10/valentines-hearts-clipart-2.png"
+                alt=""
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="doa">
+        <p id="isidoa">
+          semoga mama selalu diberi kesehatan, kebahagiaan, diberi umur panjang
+          sampai bisa menikmati hasil kerja Hendry, bisa naik haji bareng tante
+          tety dan kalo bisa hendry ikut juga ya ma, yg penting mama jangan
+          banyak sedih-sedih supaya kesehatannya selalu terjaga, semoga kami
+          semua anak-anak mama dapat membahagiakan mama dan ga membuat mama
+          sedih lagi hehe, selamat ulang tahun <b>ke-62 </b>mama. <br />
+          <br />
+          <i>we love u mom</i>
+        </p>
+        <p id="salam"></p>
+      </div>
+    </div>
+    <script>
+      var isidoa = document.getElementById("isidoa");
+
+      var isidoatypewriter = new Typewriter(isidoa, {
+        loop: false,
+      });
+
+      var pauses = 1000;
+
+      isidoatypewriter
+        .typeString("<h1>Doa Kami")
+        .pauseFor(pauses)
+        .typeString("semoga mama selalu diberi kesehatan, ")
+        .pauseFor(pauses)
+        .typeString("kebahagiaan, ")
+        .pauseFor(pauses)
+        .typeString(
+          "diberi umur panjang sampai bisa menikmati hasil kerja Hendry, "
+        )
+        .pauseFor(pauses)
+        .typeString(
+          "bisa naik haji bareng tante tety dan kalo bisa hendry ikut juga ya ma, "
+        )
+        .pauseFor(pauses)
+        .typeString(
+          "yg penting mama jangan banyak sedih-sedih supaya kesehatannya selalu terjaga, "
+        )
+        .pauseFor(pauses)
+        .typeString(
+          "semoga kami semua anak-anak mama bisa membahagiakan mama dan ga membuat mama sedih lagi hehe, "
+        )
+        .pauseFor(pauses)
+        .typeString("selamat ulang tahun")
+        .typeString("<b> ke-62 </b>")
+        .typeString("mama.")
+        .typeString("<p> </p>")
+        .typeString("<i>we love u mom.</i>")
+        .start();
+    </script>
+    <iframe
+      id="mp"
+      width="100%"
+      height="300"
+      scrolling="no"
+      frameborder="no"
+      allow="autoplay"
+      src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/99226321&color=%23ff5500&auto_play=true&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"
+    ></iframe>
+    <div
+      style="
+        font-size: 10px;
+        color: #cccccc;
+        line-break: anywhere;
+        word-break: normal;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        font-family: Interstate, Lucida Grande, Lucida Sans Unicode, Lucida Sans,
+          Garuda, Verdana, Tahoma, sans-serif;
+        font-weight: 100;
+      "
+    >
+      <a
+        href="https://soundcloud.com/selinairwan"
+        title="selinairwan"
+        target="_blank"
+        style="color: #cccccc; text-decoration: none"
+        >selinairwan</a
+      >
+      ·
+      <a
+        href="https://soundcloud.com/selinairwan/bunda-melly-goeslaw"
+        title="Bunda- Melly Goeslaw"
+        target="_blank"
+        style="color: #cccccc; text-decoration: none"
+        >Bunda- Melly Goeslaw</a
+      >
     </div>
   </body>
 </html>
